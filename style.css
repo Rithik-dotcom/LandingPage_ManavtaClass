@@ -1,0 +1,1347 @@
+/* =====================================================
+   MANAVTACLASS LANDING PAGE
+   COMPLETE CSS
+===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+  --orange: #ff581e;
+  --orange-dark: #e84913;
+  --yellow: #ffd447;
+  --dark: #222222;
+  --gray: #777777;
+  --light: #f7f7f7;
+  --cream: #fff6eb;
+  --border: #e8e8e8;
+}
+
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+}
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #eeeeee;
+  color: var(--dark);
+}
+
+
+/* =====================================================
+   MAIN PAGE
+===================================================== */
+
+.page {
+  width: 100%;
+  max-width: 1450px;
+  height: 100vh;
+  min-height: 680px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 48% 52%;
+
+  background: white;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 680px;
+
+  overflow: hidden;
+
+  color: white;
+
+  background:
+    radial-gradient(circle at 80% 20%,
+      rgba(255, 220, 120, 0.28),
+      transparent 28%),
+    linear-gradient(135deg,
+      #ff4917,
+      #ff6a1d);
+}
+
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  height: 100%;
+
+  padding: clamp(35px, 4vw, 65px);
+}
+
+
+.logo {
+  font-size: 23px;
+  font-weight: 900;
+  letter-spacing: 2px;
+
+  margin-bottom: 25px;
+}
+
+
+.logo span {
+  color: #ffe79a;
+}
+
+
+.hero-badge {
+  display: inline-block;
+
+  padding: 7px 13px;
+
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.14);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  font-size: 10px;
+  font-weight: 800;
+}
+
+
+.hero h1 {
+  margin-top: 20px;
+
+  font-size: clamp(42px, 5vw, 72px);
+
+  line-height: 0.97;
+
+  letter-spacing: -2px;
+}
+
+
+.hero h1 span {
+  color: #fff0a7;
+}
+
+
+.hero-description {
+  max-width: 600px;
+
+  margin-top: 20px;
+
+  font-size: clamp(14px, 1.3vw, 18px);
+
+  line-height: 1.5;
+
+  color: rgba(255, 255, 255, 0.93);
+}
+
+
+.hero-features {
+  display: grid;
+
+  gap: 9px;
+
+  margin-top: 25px;
+}
+
+
+.hero-feature {
+  font-size: clamp(13px, 1.1vw, 16px);
+
+  font-weight: 600;
+}
+
+
+.hero-feature span {
+  margin-right: 8px;
+
+  color: #ffe49b;
+}
+
+
+.app-card {
+  position: absolute;
+
+  bottom: 85px;
+  right: 7%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 12px 15px;
+
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+
+.app-card-icon {
+  width: 42px;
+  height: 42px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 11px;
+
+  background: white;
+
+  font-size: 21px;
+}
+
+
+.app-card strong {
+  display: block;
+
+  font-size: 12px;
+}
+
+
+.app-card small {
+  display: block;
+
+  margin-top: 3px;
+
+  font-size: 9px;
+
+  opacity: 0.8;
+}
+
+
+.hero-bottom {
+  position: absolute;
+
+  z-index: 3;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding: 21px;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  color: #d45439;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 0.4px;
+}
+
+
+/* =====================================================
+   COURSE PANEL
+===================================================== */
+
+.course-section {
+  position: relative;
+
+  min-width: 0;
+
+  height: 100vh;
+
+  background: white;
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   COURSE SCROLL
+===================================================== */
+
+.course-scroll {
+  height: calc(100vh - 105px);
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  padding: 30px 40px 45px;
+
+  scrollbar-width: thin;
+}
+
+
+.course-scroll::-webkit-scrollbar {
+  width: 7px;
+}
+
+
+.course-scroll::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+
+
+.course-scroll::-webkit-scrollbar-thumb {
+  background: #cccccc;
+
+  border-radius: 10px;
+}
+
+
+/* =====================================================
+   COURSE HEADER
+===================================================== */
+
+.course-header {
+  margin-bottom: 18px;
+}
+
+
+.brand-label {
+  color: var(--orange);
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 8px;
+}
+
+
+.course-header h2 {
+  font-size: clamp(27px, 3vw, 40px);
+
+  line-height: 1.1;
+}
+
+
+.course-subtitle {
+  margin-top: 8px;
+
+  color: #888;
+
+  font-size: 13px;
+}
+
+
+/* =====================================================
+   QUICK CLASS SELECTOR
+===================================================== */
+
+.quick-class-selector {
+  position: sticky;
+
+  top: 0;
+
+  z-index: 100;
+
+  margin-bottom: 18px;
+
+  padding: 15px;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  backdrop-filter: blur(10px);
+
+  border: 1px solid #f0e2d5;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+
+.quick-class-title {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 11px;
+}
+
+
+.quick-class-title>div {
+  font-size: 19px;
+
+  font-weight: 900;
+}
+
+
+.quick-class-title small {
+  color: #999;
+
+  font-size: 10px;
+}
+
+
+.fire-icon {
+  margin-right: 3px;
+}
+
+
+/* =====================================================
+   CLASS GRID
+===================================================== */
+
+.class-grid {
+  display: grid;
+
+  grid-template-columns: repeat(5, 1fr);
+
+  gap: 9px;
+}
+
+
+.class-button {
+  min-height: 54px;
+
+  border: 2px solid #efa04a;
+
+  border-bottom-width: 5px;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(#ffdc9e,
+      #ffb65f);
+
+  color: #aa5b27;
+
+  font-size: 15px;
+
+  font-weight: 900;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    background 0.18s ease;
+}
+
+
+.class-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 5px 12px rgba(255, 90, 30, 0.15);
+}
+
+
+.class-button.active {
+  color: white;
+
+  border-color: #d94d16;
+
+  background:
+    linear-gradient(#ff7838,
+      #f1541b);
+
+  box-shadow:
+    0 5px 12px rgba(255, 90, 30, 0.2);
+}
+
+
+.selected-class {
+  margin-top: 9px;
+
+  padding: 7px;
+
+  text-align: center;
+
+  border-radius: 8px;
+
+  background: #fff5eb;
+
+  color: #d65a27;
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   TIMER
+===================================================== */
+
+.timer {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  margin-bottom: 27px;
+}
+
+
+.timer-item {
+  min-width: 52px;
+
+  padding: 7px 5px;
+
+  text-align: center;
+
+  border-radius: 8px;
+
+  background: #fff4e8;
+
+  border: 1px solid #efd8c5;
+}
+
+
+.timer-item strong {
+  display: block;
+
+  font-size: 18px;
+}
+
+
+.timer-item span {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #999;
+
+  font-size: 7px;
+
+  font-weight: 700;
+}
+
+
+.timer-colon {
+  font-size: 20px;
+
+  font-weight: 900;
+
+  color: #999;
+}
+
+
+/* =====================================================
+   BENEFITS
+===================================================== */
+
+.benefits-section {
+  margin-bottom: 28px;
+}
+
+
+.benefits-section>h3 {
+  margin-bottom: 13px;
+
+  font-size: 22px;
+}
+
+
+.benefits-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 9px;
+}
+
+
+.benefit-card {
+  display: flex;
+
+  gap: 10px;
+
+  padding: 12px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 11px;
+
+  background: #fafafa;
+}
+
+
+.benefit-icon {
+  width: 37px;
+  height: 37px;
+
+  flex-shrink: 0;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 9px;
+
+  background: #fff0e4;
+
+  font-size: 17px;
+}
+
+
+.benefit-card h4 {
+  margin-bottom: 3px;
+
+  font-size: 13px;
+}
+
+
+.benefit-card p {
+  color: #777;
+
+  font-size: 10px;
+
+  line-height: 1.35;
+}
+
+
+/* =====================================================
+   LEARNING SYSTEM
+===================================================== */
+
+.learning-system {
+  padding: 17px;
+
+  margin-bottom: 28px;
+
+  border-radius: 13px;
+
+  background: #fff7ed;
+}
+
+
+.learning-system h3 {
+  margin-bottom: 13px;
+
+  font-size: 16px;
+}
+
+
+.learning-steps {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+}
+
+
+.learning-steps div {
+  text-align: center;
+}
+
+
+.learning-steps span,
+.learning-steps strong,
+.learning-steps small {
+  display: block;
+}
+
+
+.learning-steps span {
+  color: var(--orange);
+
+  font-size: 9px;
+
+  font-weight: 900;
+}
+
+
+.learning-steps strong {
+  margin: 3px 0;
+
+  font-size: 11px;
+}
+
+
+.learning-steps small {
+  color: #888;
+
+  font-size: 8px;
+}
+
+
+/* =====================================================
+   EXPERIENCE
+===================================================== */
+
+.experience-section {
+  margin-bottom: 30px;
+}
+
+
+.experience-label {
+  color: var(--orange);
+
+  font-size: 9px;
+
+  font-weight: 900;
+}
+
+
+.experience-section>h3 {
+  margin-top: 5px;
+
+  margin-bottom: 14px;
+
+  font-size: 21px;
+}
+
+
+.experience-card {
+  display: flex;
+
+  gap: 11px;
+
+  padding: 13px;
+
+  margin-bottom: 9px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 11px;
+}
+
+
+.experience-avatar {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #ffe0d1;
+
+  color: #d94e20;
+
+  font-weight: 900;
+}
+
+
+.experience-card strong {
+  font-size: 12px;
+}
+
+
+.experience-card p {
+  margin-top: 3px;
+
+  color: #666;
+
+  font-size: 10px;
+
+  line-height: 1.4;
+}
+
+
+/* =====================================================
+   DESKTOP CHECKOUT
+===================================================== */
+
+.desktop-checkout {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 200;
+
+  height: 105px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 15px 40px;
+
+  background: rgba(255, 248, 239, 0.98);
+
+  border-top: 1px solid #eedfd1;
+
+  box-shadow:
+    0 -8px 25px rgba(0, 0, 0, 0.06);
+}
+
+
+.checkout-price span {
+  display: block;
+
+  color: #777;
+
+  font-size: 11px;
+}
+
+
+.checkout-price strong {
+  color: var(--orange);
+
+  font-size: 30px;
+}
+
+
+.checkout-price del {
+  margin-left: 5px;
+
+  color: #999;
+
+  font-size: 13px;
+}
+
+
+/* =====================================================
+   ENROLL BUTTON
+===================================================== */
+
+.enroll-button {
+  min-height: 55px;
+
+  padding: 0 40px;
+
+  border: none;
+
+  border-radius: 35px;
+
+  background:
+    linear-gradient(90deg,
+      #ffd13f,
+      #ff4d1c);
+
+  color: white;
+
+  font-size: 18px;
+
+  font-weight: 900;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 7px 18px rgba(255, 90, 30, 0.2);
+
+  transition: 0.18s ease;
+}
+
+
+.enroll-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+
+.enroll-button:disabled {
+  background: #cfcfcf;
+
+  color: #eeeeee;
+
+  cursor: not-allowed;
+
+  box-shadow: none;
+}
+
+
+/* =====================================================
+   MOBILE CHECKOUT
+===================================================== */
+
+.mobile-checkout {
+  display: none;
+}
+
+
+/* =====================================================
+   TOAST
+===================================================== */
+
+.toast {
+  position: fixed;
+
+  z-index: 9999;
+
+  left: 50%;
+
+  bottom: 25px;
+
+  transform:
+    translate(-50%, 100px);
+
+  padding: 11px 17px;
+
+  border-radius: 9px;
+
+  background: #222;
+
+  color: white;
+
+  font-size: 12px;
+
+  opacity: 0;
+
+  transition: 0.25s;
+}
+
+
+.toast.show {
+  opacity: 1;
+
+  transform:
+    translate(-50%, 0);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 950px) {
+
+  .page {
+    grid-template-columns: 42% 58%;
+  }
+
+
+  .hero-content {
+    padding: 30px;
+  }
+
+
+  .hero h1 {
+    font-size: 44px;
+  }
+
+
+  .app-card {
+    display: none;
+  }
+
+
+  .course-scroll {
+    padding: 25px;
+  }
+
+
+  .desktop-checkout {
+    padding: 15px 25px;
+  }
+
+
+  .class-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  body {
+    background: white;
+
+    padding-bottom: 78px;
+  }
+
+
+  .page {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    min-height: 0;
+
+    overflow: visible;
+  }
+
+
+  /* =================================================
+     MOBILE HERO
+  ================================================= */
+
+  .hero {
+    min-height: 365px;
+
+    height: auto;
+
+    max-height: 410px;
+  }
+
+
+  .hero-content {
+    height: auto;
+
+    padding: 20px 18px 75px;
+  }
+
+
+  .logo {
+    font-size: 17px;
+
+    margin-bottom: 13px;
+  }
+
+
+  .hero-badge {
+    font-size: 7px;
+
+    padding: 6px 10px;
+  }
+
+
+  .hero h1 {
+    margin-top: 15px;
+
+    font-size: 34px;
+
+    letter-spacing: -1px;
+  }
+
+
+  .hero-description {
+    margin-top: 13px;
+
+    font-size: 11px;
+
+    line-height: 1.4;
+
+    max-width: 340px;
+  }
+
+
+  .hero-features {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 6px 12px;
+
+    margin-top: 15px;
+  }
+
+
+  .hero-feature {
+    font-size: 10px;
+  }
+
+
+  .hero-feature span {
+    margin-right: 4px;
+  }
+
+
+  .app-card {
+    display: none;
+  }
+
+
+  .hero-bottom {
+    padding: 13px 5px;
+
+    font-size: 8px;
+  }
+
+
+  /* =================================================
+     COURSE
+  ================================================= */
+
+  .course-section {
+    height: auto;
+
+    overflow: visible;
+  }
+
+
+  .course-scroll {
+    height: auto;
+
+    overflow: visible;
+
+    padding: 18px 14px 30px;
+  }
+
+
+  .course-header {
+    margin-bottom: 12px;
+  }
+
+
+  .brand-label {
+    font-size: 8px;
+  }
+
+
+  .course-header h2 {
+    font-size: 23px;
+  }
+
+
+  .course-subtitle {
+    margin-top: 5px;
+
+    font-size: 10px;
+  }
+
+
+  /* =================================================
+     MOBILE QUICK CLASS SELECTOR
+
+     This is the important change.
+  ================================================= */
+
+  .quick-class-selector {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 500;
+
+    margin-left: -14px;
+
+    margin-right: -14px;
+
+    margin-bottom: 13px;
+
+    padding: 12px 14px;
+
+    border-radius: 0 0 14px 14px;
+
+    background: rgba(255, 255, 255, 0.98);
+
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+      0 5px 15px rgba(0, 0, 0, 0.08);
+  }
+
+
+  .quick-class-title {
+    margin-bottom: 9px;
+
+    gap: 5px;
+  }
+
+
+  .quick-class-title>div {
+    font-size: 17px;
+  }
+
+
+  .quick-class-title small {
+    display: none;
+  }
+
+
+  .class-grid {
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 5px;
+  }
+
+
+  .class-button {
+    min-height: 48px;
+
+    border-radius: 8px;
+
+    border-width: 2px;
+
+    border-bottom-width: 4px;
+
+    font-size: 11px;
+  }
+
+
+  .selected-class {
+    margin-top: 6px;
+
+    padding: 5px;
+
+    font-size: 9px;
+  }
+
+
+  /* =================================================
+     TIMER
+  ================================================= */
+
+  .timer {
+    width: 100%;
+
+    margin-top: 10px;
+
+    margin-bottom: 20px;
+  }
+
+
+  .timer-item {
+    flex: 1;
+
+    min-width: 0;
+  }
+
+
+  /* =================================================
+     BENEFITS
+  ================================================= */
+
+  .benefits-section {
+    margin-bottom: 24px;
+  }
+
+
+  .benefits-section>h3 {
+    font-size: 20px;
+  }
+
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .benefit-card {
+    padding: 13px;
+  }
+
+
+  /* =================================================
+     LEARNING
+  ================================================= */
+
+  .learning-steps {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+  }
+
+
+  /* =================================================
+     DESKTOP CHECKOUT
+  ================================================= */
+
+  .desktop-checkout {
+    display: none;
+  }
+
+
+  /* =================================================
+     MOBILE CHECKOUT
+  ================================================= */
+
+  .mobile-checkout {
+    position: fixed;
+
+    z-index: 1000;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 9px 11px;
+
+    background: rgba(255, 248, 239, 0.98);
+
+    border-top: 1px solid #eadbcb;
+
+    box-shadow:
+      0 -7px 20px rgba(0, 0, 0, 0.12);
+  }
+
+
+  .mobile-price {
+    min-width: 63px;
+  }
+
+
+  .mobile-price small {
+    display: block;
+
+    color: #888;
+
+    font-size: 9px;
+  }
+
+
+  .mobile-price strong {
+    display: block;
+
+    color: var(--orange);
+
+    font-size: 22px;
+  }
+
+
+  .mobile-checkout .enroll-button {
+    flex: 1;
+
+    min-height: 51px;
+
+    padding: 0;
+
+    font-size: 16px;
+  }
+
+
+  .toast {
+    bottom: 90px;
+  }
+
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+
+  .class-button {
+    font-size: 10px;
+
+    min-height: 44px;
+  }
+
+
+  .quick-class-title>div {
+    font-size: 15px;
+  }
+
+
+  .hero h1 {
+    font-size: 31px;
+  }
+
+}

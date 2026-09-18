@@ -1,6 +1,6 @@
 /* =====================================================
    MANAVTACLASS LANDING PAGE
-   COMPLETE CSS
+   COMPLETE CSS — BLUE THEME
 ===================================================== */
 
 * {
@@ -9,18 +9,16 @@
   box-sizing: border-box;
 }
 
-
 :root {
-  --orange: #ff581e;
-  --orange-dark: #e84913;
-  --yellow: #ffd447;
+  --blue: #2563eb;
+  --blue-dark: #1d4ed8;
+  --blue-light: #60a5fa;
   --dark: #222222;
   --gray: #777777;
-  --light: #f7f7f7;
-  --cream: #fff6eb;
-  --border: #e8e8e8;
+  --light: #f7f9fc;
+  --cream: #eff6ff;
+  --border: #e5eaf2;
 }
-
 
 html,
 body {
@@ -28,13 +26,11 @@ body {
   min-height: 100%;
 }
 
-
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: #eeeeee;
   color: var(--dark);
 }
-
 
 /* =====================================================
    MAIN PAGE
@@ -53,7 +49,6 @@ body {
   background: white;
 }
 
-
 /* =====================================================
    HERO
 ===================================================== */
@@ -69,13 +64,13 @@ body {
 
   background:
     radial-gradient(circle at 80% 20%,
-      rgba(255, 220, 120, 0.28),
+      rgba(147, 197, 253, 0.30),
       transparent 28%),
     linear-gradient(135deg,
-      #ff4917,
-      #ff6a1d);
+      #1d4ed8,
+      #2563eb,
+      #3b82f6);
 }
-
 
 .hero-content {
   position: relative;
@@ -86,7 +81,6 @@ body {
   padding: clamp(35px, 4vw, 65px);
 }
 
-
 .logo {
   font-size: 23px;
   font-weight: 900;
@@ -95,11 +89,9 @@ body {
   margin-bottom: 25px;
 }
 
-
 .logo span {
-  color: #ffe79a;
+  color: #bfdbfe;
 }
-
 
 .hero-badge {
   display: inline-block;
@@ -116,7 +108,6 @@ body {
   font-weight: 800;
 }
 
-
 .hero h1 {
   margin-top: 20px;
 
@@ -127,11 +118,9 @@ body {
   letter-spacing: -2px;
 }
 
-
 .hero h1 span {
-  color: #fff0a7;
+  color: #dbeafe;
 }
-
 
 .hero-description {
   max-width: 600px;
@@ -145,7 +134,6 @@ body {
   color: rgba(255, 255, 255, 0.93);
 }
 
-
 .hero-features {
   display: grid;
 
@@ -154,20 +142,17 @@ body {
   margin-top: 25px;
 }
 
-
 .hero-feature {
   font-size: clamp(13px, 1.1vw, 16px);
 
   font-weight: 600;
 }
 
-
 .hero-feature span {
   margin-right: 8px;
 
-  color: #ffe49b;
+  color: #bfdbfe;
 }
-
 
 .app-card {
   position: absolute;
@@ -192,7 +177,6 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
-
 .app-card-icon {
   width: 42px;
   height: 42px;
@@ -207,13 +191,11 @@ body {
   font-size: 21px;
 }
 
-
 .app-card strong {
   display: block;
 
   font-size: 12px;
 }
-
 
 .app-card small {
   display: block;
@@ -224,7 +206,6 @@ body {
 
   opacity: 0.8;
 }
-
 
 .hero-bottom {
   position: absolute;
@@ -241,7 +222,7 @@ body {
 
   background: rgba(255, 255, 255, 0.95);
 
-  color: #d45439;
+  color: #1d4ed8;
 
   font-size: 11px;
 
@@ -249,7 +230,6 @@ body {
 
   letter-spacing: 0.4px;
 }
-
 
 /* =====================================================
    COURSE PANEL
@@ -267,7 +247,6 @@ body {
   overflow: hidden;
 }
 
-
 /* =====================================================
    COURSE SCROLL
 ===================================================== */
@@ -283,23 +262,19 @@ body {
   scrollbar-width: thin;
 }
 
-
 .course-scroll::-webkit-scrollbar {
   width: 7px;
 }
 
-
 .course-scroll::-webkit-scrollbar-track {
   background: #f5f5f5;
 }
-
 
 .course-scroll::-webkit-scrollbar-thumb {
   background: #cccccc;
 
   border-radius: 10px;
 }
-
 
 /* =====================================================
    COURSE HEADER
@@ -309,9 +284,8 @@ body {
   margin-bottom: 18px;
 }
 
-
 .brand-label {
-  color: var(--orange);
+  color: var(--blue);
 
   font-size: 10px;
 
@@ -322,13 +296,11 @@ body {
   margin-bottom: 8px;
 }
 
-
 .course-header h2 {
   font-size: clamp(27px, 3vw, 40px);
 
   line-height: 1.1;
 }
-
 
 .course-subtitle {
   margin-top: 8px;
@@ -337,7 +309,6 @@ body {
 
   font-size: 13px;
 }
-
 
 /* =====================================================
    QUICK CLASS SELECTOR
@@ -358,14 +329,13 @@ body {
 
   backdrop-filter: blur(10px);
 
-  border: 1px solid #f0e2d5;
+  border: 1px solid #dbeafe;
 
   border-radius: 14px;
 
   box-shadow:
     0 5px 18px rgba(0, 0, 0, 0.06);
 }
-
 
 .quick-class-title {
   display: flex;
@@ -379,13 +349,11 @@ body {
   margin-bottom: 11px;
 }
 
-
 .quick-class-title>div {
   font-size: 19px;
 
   font-weight: 900;
 }
-
 
 .quick-class-title small {
   color: #999;
@@ -393,11 +361,9 @@ body {
   font-size: 10px;
 }
 
-
 .fire-icon {
   margin-right: 3px;
 }
-
 
 /* =====================================================
    CLASS GRID
@@ -411,21 +377,20 @@ body {
   gap: 9px;
 }
 
-
 .class-button {
   min-height: 54px;
 
-  border: 2px solid #efa04a;
+  border: 2px solid #93c5fd;
 
   border-bottom-width: 5px;
 
   border-radius: 10px;
 
   background:
-    linear-gradient(#ffdc9e,
-      #ffb65f);
+    linear-gradient(#dbeafe,
+      #bfdbfe);
 
-  color: #aa5b27;
+  color: #1e40af;
 
   font-size: 15px;
 
@@ -439,28 +404,25 @@ body {
     background 0.18s ease;
 }
 
-
 .class-button:hover {
   transform: translateY(-2px);
 
   box-shadow:
-    0 5px 12px rgba(255, 90, 30, 0.15);
+    0 5px 12px rgba(37, 99, 235, 0.18);
 }
-
 
 .class-button.active {
   color: white;
 
-  border-color: #d94d16;
+  border-color: #1d4ed8;
 
   background:
-    linear-gradient(#ff7838,
-      #f1541b);
+    linear-gradient(#3b82f6,
+      #1d4ed8);
 
   box-shadow:
-    0 5px 12px rgba(255, 90, 30, 0.2);
+    0 5px 12px rgba(37, 99, 235, 0.25);
 }
-
 
 .selected-class {
   margin-top: 9px;
@@ -471,15 +433,14 @@ body {
 
   border-radius: 8px;
 
-  background: #fff5eb;
+  background: #eff6ff;
 
-  color: #d65a27;
+  color: #1d4ed8;
 
   font-size: 10px;
 
   font-weight: 700;
 }
-
 
 /* =====================================================
    TIMER
@@ -495,7 +456,6 @@ body {
   margin-bottom: 27px;
 }
 
-
 .timer-item {
   min-width: 52px;
 
@@ -505,18 +465,16 @@ body {
 
   border-radius: 8px;
 
-  background: #fff4e8;
+  background: #eff6ff;
 
-  border: 1px solid #efd8c5;
+  border: 1px solid #dbeafe;
 }
-
 
 .timer-item strong {
   display: block;
 
   font-size: 18px;
 }
-
 
 .timer-item span {
   display: block;
@@ -530,7 +488,6 @@ body {
   font-weight: 700;
 }
 
-
 .timer-colon {
   font-size: 20px;
 
@@ -538,7 +495,6 @@ body {
 
   color: #999;
 }
-
 
 /* =====================================================
    BENEFITS
@@ -548,13 +504,11 @@ body {
   margin-bottom: 28px;
 }
 
-
 .benefits-section>h3 {
   margin-bottom: 13px;
 
   font-size: 22px;
 }
-
 
 .benefits-grid {
   display: grid;
@@ -563,7 +517,6 @@ body {
 
   gap: 9px;
 }
-
 
 .benefit-card {
   display: flex;
@@ -579,7 +532,6 @@ body {
   background: #fafafa;
 }
 
-
 .benefit-icon {
   width: 37px;
   height: 37px;
@@ -592,18 +544,16 @@ body {
 
   border-radius: 9px;
 
-  background: #fff0e4;
+  background: #eff6ff;
 
   font-size: 17px;
 }
-
 
 .benefit-card h4 {
   margin-bottom: 3px;
 
   font-size: 13px;
 }
-
 
 .benefit-card p {
   color: #777;
@@ -612,7 +562,6 @@ body {
 
   line-height: 1.35;
 }
-
 
 /* =====================================================
    LEARNING SYSTEM
@@ -625,9 +574,8 @@ body {
 
   border-radius: 13px;
 
-  background: #fff7ed;
+  background: #eff6ff;
 }
-
 
 .learning-system h3 {
   margin-bottom: 13px;
@@ -635,18 +583,15 @@ body {
   font-size: 16px;
 }
 
-
 .learning-steps {
   display: grid;
 
   grid-template-columns: repeat(4, 1fr);
 }
 
-
 .learning-steps div {
   text-align: center;
 }
-
 
 .learning-steps span,
 .learning-steps strong,
@@ -654,15 +599,13 @@ body {
   display: block;
 }
 
-
 .learning-steps span {
-  color: var(--orange);
+  color: var(--blue);
 
   font-size: 9px;
 
   font-weight: 900;
 }
-
 
 .learning-steps strong {
   margin: 3px 0;
@@ -670,13 +613,11 @@ body {
   font-size: 11px;
 }
 
-
 .learning-steps small {
   color: #888;
 
   font-size: 8px;
 }
-
 
 /* =====================================================
    EXPERIENCE
@@ -686,15 +627,13 @@ body {
   margin-bottom: 30px;
 }
 
-
 .experience-label {
-  color: var(--orange);
+  color: var(--blue);
 
   font-size: 9px;
 
   font-weight: 900;
 }
-
 
 .experience-section>h3 {
   margin-top: 5px;
@@ -703,7 +642,6 @@ body {
 
   font-size: 21px;
 }
-
 
 .experience-card {
   display: flex;
@@ -719,7 +657,6 @@ body {
   border-radius: 11px;
 }
 
-
 .experience-avatar {
   width: 38px;
   height: 38px;
@@ -732,18 +669,16 @@ body {
 
   border-radius: 50%;
 
-  background: #ffe0d1;
+  background: #dbeafe;
 
-  color: #d94e20;
+  color: #1d4ed8;
 
   font-weight: 900;
 }
 
-
 .experience-card strong {
   font-size: 12px;
 }
-
 
 .experience-card p {
   margin-top: 3px;
@@ -754,7 +689,6 @@ body {
 
   line-height: 1.4;
 }
-
 
 /* =====================================================
    DESKTOP CHECKOUT
@@ -781,14 +715,13 @@ body {
 
   padding: 15px 40px;
 
-  background: rgba(255, 248, 239, 0.98);
+  background: rgba(239, 246, 255, 0.98);
 
-  border-top: 1px solid #eedfd1;
+  border-top: 1px solid #dbeafe;
 
   box-shadow:
     0 -8px 25px rgba(0, 0, 0, 0.06);
 }
-
 
 .checkout-price span {
   display: block;
@@ -798,13 +731,11 @@ body {
   font-size: 11px;
 }
 
-
 .checkout-price strong {
-  color: var(--orange);
+  color: var(--blue);
 
   font-size: 30px;
 }
-
 
 .checkout-price del {
   margin-left: 5px;
@@ -813,7 +744,6 @@ body {
 
   font-size: 13px;
 }
-
 
 /* =====================================================
    ENROLL BUTTON
@@ -830,8 +760,8 @@ body {
 
   background:
     linear-gradient(90deg,
-      #ffd13f,
-      #ff4d1c);
+      #3b82f6,
+      #1d4ed8);
 
   color: white;
 
@@ -842,16 +772,14 @@ body {
   cursor: pointer;
 
   box-shadow:
-    0 7px 18px rgba(255, 90, 30, 0.2);
+    0 7px 18px rgba(37, 99, 235, 0.25);
 
   transition: 0.18s ease;
 }
 
-
 .enroll-button:hover:not(:disabled) {
   transform: translateY(-2px);
 }
-
 
 .enroll-button:disabled {
   background: #cfcfcf;
@@ -863,7 +791,6 @@ body {
   box-shadow: none;
 }
 
-
 /* =====================================================
    MOBILE CHECKOUT
 ===================================================== */
@@ -871,7 +798,6 @@ body {
 .mobile-checkout {
   display: none;
 }
-
 
 /* =====================================================
    TOAST
@@ -904,14 +830,12 @@ body {
   transition: 0.25s;
 }
 
-
 .toast.show {
   opacity: 1;
 
   transform:
     translate(-50%, 0);
 }
-
 
 /* =====================================================
    TABLET
@@ -923,38 +847,31 @@ body {
     grid-template-columns: 42% 58%;
   }
 
-
   .hero-content {
     padding: 30px;
   }
-
 
   .hero h1 {
     font-size: 44px;
   }
 
-
   .app-card {
     display: none;
   }
-
 
   .course-scroll {
     padding: 25px;
   }
 
-
   .desktop-checkout {
     padding: 15px 25px;
   }
-
 
   .class-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
 }
-
 
 /* =====================================================
    MOBILE
@@ -968,7 +885,6 @@ body {
     padding-bottom: 78px;
   }
 
-
   .page {
     display: block;
 
@@ -980,7 +896,6 @@ body {
 
     overflow: visible;
   }
-
 
   /* =================================================
      MOBILE HERO
@@ -994,13 +909,11 @@ body {
     max-height: 410px;
   }
 
-
   .hero-content {
     height: auto;
 
     padding: 20px 18px 75px;
   }
-
 
   .logo {
     font-size: 17px;
@@ -1008,13 +921,11 @@ body {
     margin-bottom: 13px;
   }
 
-
   .hero-badge {
     font-size: 7px;
 
     padding: 6px 10px;
   }
-
 
   .hero h1 {
     margin-top: 15px;
@@ -1023,7 +934,6 @@ body {
 
     letter-spacing: -1px;
   }
-
 
   .hero-description {
     margin-top: 13px;
@@ -1035,7 +945,6 @@ body {
     max-width: 340px;
   }
 
-
   .hero-features {
     grid-template-columns: repeat(2, 1fr);
 
@@ -1044,28 +953,23 @@ body {
     margin-top: 15px;
   }
 
-
   .hero-feature {
     font-size: 10px;
   }
-
 
   .hero-feature span {
     margin-right: 4px;
   }
 
-
   .app-card {
     display: none;
   }
-
 
   .hero-bottom {
     padding: 13px 5px;
 
     font-size: 8px;
   }
-
 
   /* =================================================
      COURSE
@@ -1077,7 +981,6 @@ body {
     overflow: visible;
   }
 
-
   .course-scroll {
     height: auto;
 
@@ -1086,21 +989,17 @@ body {
     padding: 18px 14px 30px;
   }
 
-
   .course-header {
     margin-bottom: 12px;
   }
-
 
   .brand-label {
     font-size: 8px;
   }
 
-
   .course-header h2 {
     font-size: 23px;
   }
-
 
   .course-subtitle {
     margin-top: 5px;
@@ -1108,11 +1007,8 @@ body {
     font-size: 10px;
   }
 
-
   /* =================================================
      MOBILE QUICK CLASS SELECTOR
-
-     This is the important change.
   ================================================= */
 
   .quick-class-selector {
@@ -1140,30 +1036,25 @@ body {
       0 5px 15px rgba(0, 0, 0, 0.08);
   }
 
-
   .quick-class-title {
     margin-bottom: 9px;
 
     gap: 5px;
   }
 
-
   .quick-class-title>div {
     font-size: 17px;
   }
 
-
   .quick-class-title small {
     display: none;
   }
-
 
   .class-grid {
     grid-template-columns: repeat(5, 1fr);
 
     gap: 5px;
   }
-
 
   .class-button {
     min-height: 48px;
@@ -1177,7 +1068,6 @@ body {
     font-size: 11px;
   }
 
-
   .selected-class {
     margin-top: 6px;
 
@@ -1185,7 +1075,6 @@ body {
 
     font-size: 9px;
   }
-
 
   /* =================================================
      TIMER
@@ -1199,13 +1088,11 @@ body {
     margin-bottom: 20px;
   }
 
-
   .timer-item {
     flex: 1;
 
     min-width: 0;
   }
-
 
   /* =================================================
      BENEFITS
@@ -1215,21 +1102,17 @@ body {
     margin-bottom: 24px;
   }
 
-
   .benefits-section>h3 {
     font-size: 20px;
   }
-
 
   .benefits-grid {
     grid-template-columns: 1fr;
   }
 
-
   .benefit-card {
     padding: 13px;
   }
-
 
   /* =================================================
      LEARNING
@@ -1241,7 +1124,6 @@ body {
     gap: 15px;
   }
 
-
   /* =================================================
      DESKTOP CHECKOUT
   ================================================= */
@@ -1249,7 +1131,6 @@ body {
   .desktop-checkout {
     display: none;
   }
-
 
   /* =================================================
      MOBILE CHECKOUT
@@ -1272,19 +1153,17 @@ body {
 
     padding: 9px 11px;
 
-    background: rgba(255, 248, 239, 0.98);
+    background: rgba(239, 246, 255, 0.98);
 
-    border-top: 1px solid #eadbcb;
+    border-top: 1px solid #dbeafe;
 
     box-shadow:
       0 -7px 20px rgba(0, 0, 0, 0.12);
   }
 
-
   .mobile-price {
     min-width: 63px;
   }
-
 
   .mobile-price small {
     display: block;
@@ -1294,15 +1173,13 @@ body {
     font-size: 9px;
   }
 
-
   .mobile-price strong {
     display: block;
 
-    color: var(--orange);
+    color: var(--blue);
 
     font-size: 22px;
   }
-
 
   .mobile-checkout .enroll-button {
     flex: 1;
@@ -1314,13 +1191,11 @@ body {
     font-size: 16px;
   }
 
-
   .toast {
     bottom: 90px;
   }
 
 }
-
 
 /* =====================================================
    VERY SMALL MOBILE
@@ -1334,11 +1209,9 @@ body {
     min-height: 44px;
   }
 
-
   .quick-class-title>div {
     font-size: 15px;
   }
-
 
   .hero h1 {
     font-size: 31px;

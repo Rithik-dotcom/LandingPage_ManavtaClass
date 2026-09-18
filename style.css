@@ -9,16 +9,21 @@
   box-sizing: border-box;
 }
 
+
 :root {
   --blue: #2563eb;
   --blue-dark: #1d4ed8;
   --blue-light: #60a5fa;
+
   --dark: #222222;
   --gray: #777777;
+
   --light: #f7f9fc;
   --cream: #eff6ff;
+
   --border: #e5eaf2;
 }
+
 
 html,
 body {
@@ -26,11 +31,14 @@ body {
   min-height: 100%;
 }
 
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: #eeeeee;
   color: var(--dark);
 }
+
+
 
 /* =====================================================
    MAIN PAGE
@@ -39,8 +47,10 @@ body {
 .page {
   width: 100%;
   max-width: 1450px;
+
   height: 100vh;
   min-height: 680px;
+
   margin: auto;
 
   display: grid;
@@ -49,12 +59,15 @@ body {
   background: white;
 }
 
+
+
 /* =====================================================
    HERO
 ===================================================== */
 
 .hero {
   position: relative;
+
   height: 100vh;
   min-height: 680px;
 
@@ -72,8 +85,10 @@ body {
       #3b82f6);
 }
 
+
 .hero-content {
   position: relative;
+
   z-index: 2;
 
   height: 100%;
@@ -81,17 +96,22 @@ body {
   padding: clamp(35px, 4vw, 65px);
 }
 
+
 .logo {
   font-size: 23px;
+
   font-weight: 900;
+
   letter-spacing: 2px;
 
   margin-bottom: 25px;
 }
 
+
 .logo span {
   color: #bfdbfe;
 }
+
 
 .hero-badge {
   display: inline-block;
@@ -105,8 +125,10 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.3);
 
   font-size: 10px;
+
   font-weight: 800;
 }
+
 
 .hero h1 {
   margin-top: 20px;
@@ -118,9 +140,11 @@ body {
   letter-spacing: -2px;
 }
 
+
 .hero h1 span {
   color: #dbeafe;
 }
+
 
 .hero-description {
   max-width: 600px;
@@ -134,6 +158,12 @@ body {
   color: rgba(255, 255, 255, 0.93);
 }
 
+
+
+/* =====================================================
+   HERO FEATURES
+===================================================== */
+
 .hero-features {
   display: grid;
 
@@ -142,17 +172,25 @@ body {
   margin-top: 25px;
 }
 
+
 .hero-feature {
   font-size: clamp(13px, 1.1vw, 16px);
 
   font-weight: 600;
 }
 
+
 .hero-feature span {
   margin-right: 8px;
 
   color: #bfdbfe;
 }
+
+
+
+/* =====================================================
+   APP CARD
+===================================================== */
 
 .app-card {
   position: absolute;
@@ -177,11 +215,13 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
+
 .app-card-icon {
   width: 42px;
   height: 42px;
 
   display: grid;
+
   place-items: center;
 
   border-radius: 11px;
@@ -191,11 +231,13 @@ body {
   font-size: 21px;
 }
 
+
 .app-card strong {
   display: block;
 
   font-size: 12px;
 }
+
 
 .app-card small {
   display: block;
@@ -206,6 +248,12 @@ body {
 
   opacity: 0.8;
 }
+
+
+
+/* =====================================================
+   HERO BOTTOM
+===================================================== */
 
 .hero-bottom {
   position: absolute;
@@ -231,6 +279,8 @@ body {
   letter-spacing: 0.4px;
 }
 
+
+
 /* =====================================================
    COURSE PANEL
 ===================================================== */
@@ -247,6 +297,8 @@ body {
   overflow: hidden;
 }
 
+
+
 /* =====================================================
    COURSE SCROLL
 ===================================================== */
@@ -255,6 +307,7 @@ body {
   height: calc(100vh - 105px);
 
   overflow-y: auto;
+
   overflow-x: hidden;
 
   padding: 30px 40px 45px;
@@ -262,19 +315,24 @@ body {
   scrollbar-width: thin;
 }
 
+
 .course-scroll::-webkit-scrollbar {
   width: 7px;
 }
 
+
 .course-scroll::-webkit-scrollbar-track {
   background: #f5f5f5;
 }
+
 
 .course-scroll::-webkit-scrollbar-thumb {
   background: #cccccc;
 
   border-radius: 10px;
 }
+
+
 
 /* =====================================================
    COURSE HEADER
@@ -283,6 +341,7 @@ body {
 .course-header {
   margin-bottom: 18px;
 }
+
 
 .brand-label {
   color: var(--blue);
@@ -296,11 +355,13 @@ body {
   margin-bottom: 8px;
 }
 
+
 .course-header h2 {
   font-size: clamp(27px, 3vw, 40px);
 
   line-height: 1.1;
 }
+
 
 .course-subtitle {
   margin-top: 8px;
@@ -309,6 +370,8 @@ body {
 
   font-size: 13px;
 }
+
+
 
 /* =====================================================
    QUICK CLASS SELECTOR
@@ -337,6 +400,7 @@ body {
     0 5px 18px rgba(0, 0, 0, 0.06);
 }
 
+
 .quick-class-title {
   display: flex;
 
@@ -349,11 +413,13 @@ body {
   margin-bottom: 11px;
 }
 
+
 .quick-class-title>div {
   font-size: 19px;
 
   font-weight: 900;
 }
+
 
 .quick-class-title small {
   color: #999;
@@ -361,9 +427,12 @@ body {
   font-size: 10px;
 }
 
+
 .fire-icon {
   margin-right: 3px;
 }
+
+
 
 /* =====================================================
    CLASS GRID
@@ -376,6 +445,7 @@ body {
 
   gap: 9px;
 }
+
 
 .class-button {
   min-height: 54px;
@@ -404,12 +474,14 @@ body {
     background 0.18s ease;
 }
 
+
 .class-button:hover {
   transform: translateY(-2px);
 
   box-shadow:
     0 5px 12px rgba(37, 99, 235, 0.18);
 }
+
 
 .class-button.active {
   color: white;
@@ -423,6 +495,7 @@ body {
   box-shadow:
     0 5px 12px rgba(37, 99, 235, 0.25);
 }
+
 
 .selected-class {
   margin-top: 9px;
@@ -442,6 +515,8 @@ body {
   font-weight: 700;
 }
 
+
+
 /* =====================================================
    TIMER
 ===================================================== */
@@ -455,6 +530,7 @@ body {
 
   margin-bottom: 27px;
 }
+
 
 .timer-item {
   min-width: 52px;
@@ -470,11 +546,13 @@ body {
   border: 1px solid #dbeafe;
 }
 
+
 .timer-item strong {
   display: block;
 
   font-size: 18px;
 }
+
 
 .timer-item span {
   display: block;
@@ -488,6 +566,7 @@ body {
   font-weight: 700;
 }
 
+
 .timer-colon {
   font-size: 20px;
 
@@ -495,6 +574,8 @@ body {
 
   color: #999;
 }
+
+
 
 /* =====================================================
    BENEFITS
@@ -504,11 +585,13 @@ body {
   margin-bottom: 28px;
 }
 
+
 .benefits-section>h3 {
   margin-bottom: 13px;
 
   font-size: 22px;
 }
+
 
 .benefits-grid {
   display: grid;
@@ -517,6 +600,7 @@ body {
 
   gap: 9px;
 }
+
 
 .benefit-card {
   display: flex;
@@ -531,6 +615,7 @@ body {
 
   background: #fafafa;
 }
+
 
 .benefit-icon {
   width: 37px;
@@ -549,11 +634,13 @@ body {
   font-size: 17px;
 }
 
+
 .benefit-card h4 {
   margin-bottom: 3px;
 
   font-size: 13px;
 }
+
 
 .benefit-card p {
   color: #777;
@@ -562,6 +649,8 @@ body {
 
   line-height: 1.35;
 }
+
+
 
 /* =====================================================
    LEARNING SYSTEM
@@ -577,11 +666,13 @@ body {
   background: #eff6ff;
 }
 
+
 .learning-system h3 {
   margin-bottom: 13px;
 
   font-size: 16px;
 }
+
 
 .learning-steps {
   display: grid;
@@ -589,15 +680,18 @@ body {
   grid-template-columns: repeat(4, 1fr);
 }
 
+
 .learning-steps div {
   text-align: center;
 }
+
 
 .learning-steps span,
 .learning-steps strong,
 .learning-steps small {
   display: block;
 }
+
 
 .learning-steps span {
   color: var(--blue);
@@ -607,17 +701,21 @@ body {
   font-weight: 900;
 }
 
+
 .learning-steps strong {
   margin: 3px 0;
 
   font-size: 11px;
 }
 
+
 .learning-steps small {
   color: #888;
 
   font-size: 8px;
 }
+
+
 
 /* =====================================================
    EXPERIENCE
@@ -627,6 +725,7 @@ body {
   margin-bottom: 30px;
 }
 
+
 .experience-label {
   color: var(--blue);
 
@@ -635,6 +734,7 @@ body {
   font-weight: 900;
 }
 
+
 .experience-section>h3 {
   margin-top: 5px;
 
@@ -642,6 +742,7 @@ body {
 
   font-size: 21px;
 }
+
 
 .experience-card {
   display: flex;
@@ -656,6 +757,7 @@ body {
 
   border-radius: 11px;
 }
+
 
 .experience-avatar {
   width: 38px;
@@ -676,9 +778,11 @@ body {
   font-weight: 900;
 }
 
+
 .experience-card strong {
   font-size: 12px;
 }
+
 
 .experience-card p {
   margin-top: 3px;
@@ -689,6 +793,53 @@ body {
 
   line-height: 1.4;
 }
+
+
+
+/* =====================================================
+   LEARNING IMAGE
+===================================================== */
+
+.learning-image-section {
+  margin-top: 25px;
+
+  margin-bottom: 30px;
+}
+
+
+.learning-image-label {
+  margin-bottom: 10px;
+
+  color: var(--blue);
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 0.8px;
+}
+
+
+.learning-image {
+  display: block;
+
+  width: 100%;
+
+  max-width: 100%;
+
+  height: auto;
+
+  border-radius: 14px;
+
+  border: 1px solid var(--border);
+
+  object-fit: cover;
+
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+
 
 /* =====================================================
    DESKTOP CHECKOUT
@@ -723,6 +874,7 @@ body {
     0 -8px 25px rgba(0, 0, 0, 0.06);
 }
 
+
 .checkout-price span {
   display: block;
 
@@ -731,11 +883,13 @@ body {
   font-size: 11px;
 }
 
+
 .checkout-price strong {
   color: var(--blue);
 
   font-size: 30px;
 }
+
 
 .checkout-price del {
   margin-left: 5px;
@@ -744,6 +898,8 @@ body {
 
   font-size: 13px;
 }
+
+
 
 /* =====================================================
    ENROLL BUTTON
@@ -777,9 +933,11 @@ body {
   transition: 0.18s ease;
 }
 
+
 .enroll-button:hover:not(:disabled) {
   transform: translateY(-2px);
 }
+
 
 .enroll-button:disabled {
   background: #cfcfcf;
@@ -791,6 +949,8 @@ body {
   box-shadow: none;
 }
 
+
+
 /* =====================================================
    MOBILE CHECKOUT
 ===================================================== */
@@ -798,6 +958,51 @@ body {
 .mobile-checkout {
   display: none;
 }
+
+
+
+/* =====================================================
+   MOBILE PRICE
+===================================================== */
+
+.mobile-price {
+  min-width: 95px;
+}
+
+
+.mobile-price small {
+  display: block;
+
+  color: #888;
+
+  font-size: 9px;
+}
+
+
+.mobile-price strong {
+  display: inline-block;
+
+  color: var(--blue);
+
+  font-size: 22px;
+}
+
+
+.mobile-price del {
+  display: inline-block;
+
+  margin-left: 4px;
+
+  color: #777;
+
+  font-size: 11px;
+
+  font-weight: 500;
+
+  white-space: nowrap;
+}
+
+
 
 /* =====================================================
    TOAST
@@ -830,12 +1035,15 @@ body {
   transition: 0.25s;
 }
 
+
 .toast.show {
   opacity: 1;
 
   transform:
     translate(-50%, 0);
 }
+
+
 
 /* =====================================================
    TABLET
@@ -847,31 +1055,39 @@ body {
     grid-template-columns: 42% 58%;
   }
 
+
   .hero-content {
     padding: 30px;
   }
+
 
   .hero h1 {
     font-size: 44px;
   }
 
+
   .app-card {
     display: none;
   }
+
 
   .course-scroll {
     padding: 25px;
   }
 
+
   .desktop-checkout {
     padding: 15px 25px;
   }
+
 
   .class-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
 }
+
+
 
 /* =====================================================
    MOBILE
@@ -885,6 +1101,7 @@ body {
     padding-bottom: 78px;
   }
 
+
   .page {
     display: block;
 
@@ -896,6 +1113,8 @@ body {
 
     overflow: visible;
   }
+
+
 
   /* =================================================
      MOBILE HERO
@@ -909,11 +1128,13 @@ body {
     max-height: 410px;
   }
 
+
   .hero-content {
     height: auto;
 
     padding: 20px 18px 75px;
   }
+
 
   .logo {
     font-size: 17px;
@@ -921,11 +1142,13 @@ body {
     margin-bottom: 13px;
   }
 
+
   .hero-badge {
     font-size: 7px;
 
     padding: 6px 10px;
   }
+
 
   .hero h1 {
     margin-top: 15px;
@@ -934,6 +1157,7 @@ body {
 
     letter-spacing: -1px;
   }
+
 
   .hero-description {
     margin-top: 13px;
@@ -945,6 +1169,7 @@ body {
     max-width: 340px;
   }
 
+
   .hero-features {
     grid-template-columns: repeat(2, 1fr);
 
@@ -953,23 +1178,29 @@ body {
     margin-top: 15px;
   }
 
+
   .hero-feature {
     font-size: 10px;
   }
+
 
   .hero-feature span {
     margin-right: 4px;
   }
 
+
   .app-card {
     display: none;
   }
+
 
   .hero-bottom {
     padding: 13px 5px;
 
     font-size: 8px;
   }
+
+
 
   /* =================================================
      COURSE
@@ -981,6 +1212,7 @@ body {
     overflow: visible;
   }
 
+
   .course-scroll {
     height: auto;
 
@@ -989,23 +1221,29 @@ body {
     padding: 18px 14px 30px;
   }
 
+
   .course-header {
     margin-bottom: 12px;
   }
+
 
   .brand-label {
     font-size: 8px;
   }
 
+
   .course-header h2 {
     font-size: 23px;
   }
+
 
   .course-subtitle {
     margin-top: 5px;
 
     font-size: 10px;
   }
+
+
 
   /* =================================================
      MOBILE QUICK CLASS SELECTOR
@@ -1036,25 +1274,30 @@ body {
       0 5px 15px rgba(0, 0, 0, 0.08);
   }
 
+
   .quick-class-title {
     margin-bottom: 9px;
 
     gap: 5px;
   }
 
+
   .quick-class-title>div {
     font-size: 17px;
   }
 
+
   .quick-class-title small {
     display: none;
   }
+
 
   .class-grid {
     grid-template-columns: repeat(5, 1fr);
 
     gap: 5px;
   }
+
 
   .class-button {
     min-height: 48px;
@@ -1068,6 +1311,7 @@ body {
     font-size: 11px;
   }
 
+
   .selected-class {
     margin-top: 6px;
 
@@ -1075,6 +1319,8 @@ body {
 
     font-size: 9px;
   }
+
+
 
   /* =================================================
      TIMER
@@ -1086,13 +1332,30 @@ body {
     margin-top: 10px;
 
     margin-bottom: 20px;
+
+    gap: 4px;
   }
+
 
   .timer-item {
     flex: 1;
 
     min-width: 0;
+
+    padding: 7px 3px;
   }
+
+
+  .timer-item strong {
+    font-size: 17px;
+  }
+
+
+  .timer-colon {
+    font-size: 18px;
+  }
+
+
 
   /* =================================================
      BENEFITS
@@ -1102,17 +1365,22 @@ body {
     margin-bottom: 24px;
   }
 
+
   .benefits-section>h3 {
     font-size: 20px;
   }
+
 
   .benefits-grid {
     grid-template-columns: 1fr;
   }
 
+
   .benefit-card {
     padding: 13px;
   }
+
+
 
   /* =================================================
      LEARNING
@@ -1124,6 +1392,34 @@ body {
     gap: 15px;
   }
 
+
+
+  /* =================================================
+     LEARNING IMAGE
+  ================================================= */
+
+  .learning-image-section {
+    margin-top: 20px;
+
+    margin-bottom: 25px;
+  }
+
+
+  .learning-image-label {
+    font-size: 8px;
+
+    margin-bottom: 8px;
+  }
+
+
+  .learning-image {
+    width: 100%;
+
+    border-radius: 12px;
+  }
+
+
+
   /* =================================================
      DESKTOP CHECKOUT
   ================================================= */
@@ -1131,6 +1427,8 @@ body {
   .desktop-checkout {
     display: none;
   }
+
+
 
   /* =================================================
      MOBILE CHECKOUT
@@ -1161,25 +1459,6 @@ body {
       0 -7px 20px rgba(0, 0, 0, 0.12);
   }
 
-  .mobile-price {
-    min-width: 63px;
-  }
-
-  .mobile-price small {
-    display: block;
-
-    color: #888;
-
-    font-size: 9px;
-  }
-
-  .mobile-price strong {
-    display: block;
-
-    color: var(--blue);
-
-    font-size: 22px;
-  }
 
   .mobile-checkout .enroll-button {
     flex: 1;
@@ -1191,11 +1470,14 @@ body {
     font-size: 16px;
   }
 
+
   .toast {
     bottom: 90px;
   }
 
 }
+
+
 
 /* =====================================================
    VERY SMALL MOBILE
@@ -1209,12 +1491,24 @@ body {
     min-height: 44px;
   }
 
+
   .quick-class-title>div {
     font-size: 15px;
   }
 
+
   .hero h1 {
     font-size: 31px;
+  }
+
+
+  .timer-item strong {
+    font-size: 15px;
+  }
+
+
+  .timer-colon {
+    font-size: 16px;
   }
 
 }

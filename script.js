@@ -4,6 +4,7 @@
 ===================================================== */
 
 
+
 /* =====================================================
    1. CLASS-SPECIFIC PAYMENT LINKS
 
@@ -31,6 +32,7 @@ const paymentLinks = {
 };
 
 
+
 /* =====================================================
    2. VARIABLES
 ===================================================== */
@@ -54,6 +56,7 @@ const mobileEnroll =
 let selectedClass = null;
 
 
+
 /* =====================================================
    3. CLASS SELECTION
 ===================================================== */
@@ -61,6 +64,7 @@ let selectedClass = null;
 classButtons.forEach(button => {
 
   button.addEventListener("click", function () {
+
 
     /* Remove previous selection */
 
@@ -71,15 +75,18 @@ classButtons.forEach(button => {
     });
 
 
+
     /* Activate selected class */
 
     this.classList.add("active");
+
 
 
     /* Get selected class */
 
     selectedClass =
       this.dataset.class;
+
 
 
     /* Update selected message */
@@ -90,11 +97,13 @@ classButtons.forEach(button => {
       " selected ✓";
 
 
+
     /* Enable enrollment buttons */
 
     desktopEnroll.disabled = false;
 
     mobileEnroll.disabled = false;
+
 
 
     /* Change button text */
@@ -111,11 +120,13 @@ classButtons.forEach(button => {
 });
 
 
+
 /* =====================================================
    4. ENROLL FUNCTION
 ===================================================== */
 
 function enrollNow() {
+
 
   /* Safety check */
 
@@ -130,10 +141,12 @@ function enrollNow() {
   }
 
 
+
   /* Get payment URL */
 
   const paymentURL =
     paymentLinks[selectedClass];
+
 
 
   /* Check payment URL */
@@ -154,12 +167,14 @@ function enrollNow() {
   }
 
 
+
   /* Redirect to payment */
 
   window.location.href =
     paymentURL;
 
 }
+
 
 
 /* =====================================================
@@ -172,6 +187,7 @@ desktopEnroll.addEventListener(
 );
 
 
+
 /* =====================================================
    6. MOBILE ENROLL BUTTON
 ===================================================== */
@@ -182,51 +198,97 @@ mobileEnroll.addEventListener(
 );
 
 
+
 /* =====================================================
    7. COUNTDOWN TIMER
 
-   Starts at 2 minutes whenever page loads.
+   Starts at 2 minutes.
+
+   Display:
+   MM : SS : MS
+
+   MS = hundredths of a second
+   00–99
 ===================================================== */
 
-let timeLeft = 2 * 60;
+let timeLeft =
+  2 * 60 * 1000;
+
+
+const minutesElement =
+  document.getElementById("minutes");
+
+
+const secondsElement =
+  document.getElementById("seconds");
+
+
+const millisecondsElement =
+  document.getElementById("milliseconds");
+
 
 
 function updateCountdown() {
 
+
   const minutes =
-    Math.floor(timeLeft / 60);
+    Math.floor(
+      timeLeft / 60000
+    );
 
 
   const seconds =
-    timeLeft % 60;
+    Math.floor(
+      (timeLeft % 60000) / 1000
+    );
 
 
-  document.getElementById("minutes").innerText =
+  const milliseconds =
+    Math.floor(
+      (timeLeft % 1000) / 10
+    );
+
+
+
+  minutesElement.innerText =
     String(minutes).padStart(2, "0");
 
 
-  document.getElementById("seconds").innerText =
+  secondsElement.innerText =
     String(seconds).padStart(2, "0");
+
+
+  millisecondsElement.innerText =
+    String(milliseconds).padStart(2, "0");
+
 
 
   if (timeLeft <= 0) {
 
     clearInterval(countdownTimer);
 
-    document.getElementById("minutes").innerText =
+
+    minutesElement.innerText =
       "00";
 
-    document.getElementById("seconds").innerText =
+
+    secondsElement.innerText =
       "00";
+
+
+    millisecondsElement.innerText =
+      "00";
+
 
     return;
 
   }
 
 
-  timeLeft--;
+  timeLeft -= 10;
 
 }
+
 
 
 /* Start timer immediately */
@@ -234,13 +296,15 @@ function updateCountdown() {
 updateCountdown();
 
 
-/* Update every second */
+
+/* Update every 10 milliseconds */
 
 const countdownTimer =
   setInterval(
     updateCountdown,
-    1000
+    10
   );
+
 
 
 /* =====================================================

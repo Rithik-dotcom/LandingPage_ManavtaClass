@@ -6,9 +6,6 @@
 
 /* =====================================================
    1. CLASS-SPECIFIC PAYMENT LINKS
-
-   Replace these with your actual Razorpay/payment
-   links for each class.
 ===================================================== */
 
 const paymentLinks = {
@@ -38,14 +35,18 @@ const paymentLinks = {
 const classButtons =
   document.querySelectorAll(".class-button");
 
+
 const selectedClassText =
   document.getElementById("selectedClass");
+
 
 const desktopEnroll =
   document.getElementById("desktopEnroll");
 
+
 const mobileEnroll =
   document.getElementById("mobileEnroll");
+
 
 let selectedClass = null;
 
@@ -121,7 +122,6 @@ function enrollNow() {
     );
 
     return;
-
   }
 
 
@@ -145,7 +145,6 @@ function enrollNow() {
     );
 
     return;
-
   }
 
 
@@ -179,15 +178,6 @@ mobileEnroll.addEventListener(
 
 /* =====================================================
    7. COUNTDOWN TIMER
-
-   Starts at 2 minutes.
-
-   Display:
-
-   MM : SS : MS
-
-   MS = hundredths of a second
-   00–99
 ===================================================== */
 
 let timeLeft =
@@ -197,8 +187,10 @@ let timeLeft =
 const minutesElement =
   document.getElementById("minutes");
 
+
 const secondsElement =
   document.getElementById("seconds");
+
 
 const millisecondsElement =
   document.getElementById("milliseconds");
@@ -240,14 +232,11 @@ function updateCountdown() {
 
     clearInterval(countdownTimer);
 
-    minutesElement.innerText =
-      "00";
+    minutesElement.innerText = "00";
 
-    secondsElement.innerText =
-      "00";
+    secondsElement.innerText = "00";
 
-    millisecondsElement.innerText =
-      "00";
+    millisecondsElement.innerText = "00";
 
     return;
   }
@@ -258,12 +247,12 @@ function updateCountdown() {
 }
 
 
-/* =====================================================
-   8. START TIMER
-===================================================== */
+/* Start timer */
 
 updateCountdown();
 
+
+/* Update every 10 milliseconds */
 
 const countdownTimer =
   setInterval(
@@ -273,7 +262,7 @@ const countdownTimer =
 
 
 /* =====================================================
-   9. TOAST
+   8. TOAST
 ===================================================== */
 
 let toastTimer;

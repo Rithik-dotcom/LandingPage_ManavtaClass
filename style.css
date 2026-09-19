@@ -28,7 +28,7 @@
 html,
 body {
   width: 100%;
-  min-height: 100%;
+  height: 100%;
 }
 
 
@@ -37,7 +37,6 @@ body {
   background: #eeeeee;
   color: var(--dark);
 }
-
 
 
 /* =====================================================
@@ -57,8 +56,9 @@ body {
   grid-template-columns: 48% 52%;
 
   background: white;
-}
 
+  overflow: hidden;
+}
 
 
 /* =====================================================
@@ -71,7 +71,8 @@ body {
   height: 100vh;
   min-height: 680px;
 
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
 
   color: white;
 
@@ -83,6 +84,24 @@ body {
       #1d4ed8,
       #2563eb,
       #3b82f6);
+
+  scrollbar-width: thin;
+}
+
+
+.hero::-webkit-scrollbar {
+  width: 6px;
+}
+
+
+.hero::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+
+.hero::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 10px;
 }
 
 
@@ -91,7 +110,7 @@ body {
 
   z-index: 2;
 
-  height: 100%;
+  min-height: 100%;
 
   padding: clamp(35px, 4vw, 65px);
 }
@@ -159,7 +178,6 @@ body {
 }
 
 
-
 /* =====================================================
    HERO FEATURES
 ===================================================== */
@@ -185,7 +203,6 @@ body {
 
   color: #bfdbfe;
 }
-
 
 
 /* =====================================================
@@ -250,18 +267,18 @@ body {
 }
 
 
-
 /* =====================================================
    HERO BOTTOM
 ===================================================== */
 
 .hero-bottom {
-  position: absolute;
+  position: sticky;
 
   z-index: 3;
 
   left: 0;
   right: 0;
+
   bottom: 0;
 
   padding: 21px;
@@ -278,7 +295,6 @@ body {
 
   letter-spacing: 0.4px;
 }
-
 
 
 /* =====================================================
@@ -298,7 +314,6 @@ body {
 }
 
 
-
 /* =====================================================
    COURSE SCROLL
 ===================================================== */
@@ -307,7 +322,6 @@ body {
   height: calc(100vh - 105px);
 
   overflow-y: auto;
-
   overflow-x: hidden;
 
   padding: 30px 40px 45px;
@@ -331,7 +345,6 @@ body {
 
   border-radius: 10px;
 }
-
 
 
 /* =====================================================
@@ -370,7 +383,6 @@ body {
 
   font-size: 13px;
 }
-
 
 
 /* =====================================================
@@ -431,7 +443,6 @@ body {
 .fire-icon {
   margin-right: 3px;
 }
-
 
 
 /* =====================================================
@@ -516,7 +527,6 @@ body {
 }
 
 
-
 /* =====================================================
    TIMER
 ===================================================== */
@@ -574,7 +584,6 @@ body {
 
   color: #999;
 }
-
 
 
 /* =====================================================
@@ -651,7 +660,6 @@ body {
 }
 
 
-
 /* =====================================================
    LEARNING SYSTEM
 ===================================================== */
@@ -714,7 +722,6 @@ body {
 
   font-size: 8px;
 }
-
 
 
 /* =====================================================
@@ -795,7 +802,6 @@ body {
 }
 
 
-
 /* =====================================================
    LEARNING IMAGE
 ===================================================== */
@@ -840,7 +846,6 @@ body {
 }
 
 
-
 /* =====================================================
    DESKTOP CHECKOUT
 ===================================================== */
@@ -850,6 +855,7 @@ body {
 
   left: 0;
   right: 0;
+
   bottom: 0;
 
   z-index: 200;
@@ -898,7 +904,6 @@ body {
 
   font-size: 13px;
 }
-
 
 
 /* =====================================================
@@ -950,7 +955,6 @@ body {
 }
 
 
-
 /* =====================================================
    MOBILE CHECKOUT
 ===================================================== */
@@ -959,11 +963,6 @@ body {
   display: none;
 }
 
-
-
-/* =====================================================
-   MOBILE PRICE
-===================================================== */
 
 .mobile-price {
   min-width: 95px;
@@ -1001,7 +1000,6 @@ body {
 
   white-space: nowrap;
 }
-
 
 
 /* =====================================================
@@ -1042,7 +1040,6 @@ body {
   transform:
     translate(-50%, 0);
 }
-
 
 
 /* =====================================================
@@ -1088,48 +1085,79 @@ body {
 }
 
 
-
 /* =====================================================
    MOBILE
+   TWO COMPLETELY SEPARATE SCROLLABLE SECTIONS
 ===================================================== */
 
 @media (max-width: 600px) {
 
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+  }
+
+
   body {
     background: white;
 
-    padding-bottom: 78px;
+    padding-bottom: 0;
   }
-
-
-  .page {
-    display: block;
-
-    width: 100%;
-
-    height: auto;
-
-    min-height: 0;
-
-    overflow: visible;
-  }
-
 
 
   /* =================================================
-     MOBILE HERO
+     MAIN PAGE
+  ================================================= */
+
+  .page {
+
+    display: flex;
+
+    flex-direction: column;
+
+    width: 100%;
+
+    height: 100vh;
+
+    min-height: 0;
+
+    overflow: hidden;
+  }
+
+
+  /* =================================================
+     HERO = INDEPENDENT SCROLL AREA
   ================================================= */
 
   .hero {
-    min-height: 365px;
 
-    height: auto;
+    flex: 0 0 50vh;
 
-    max-height: 410px;
+    width: 100%;
+
+    height: 50vh;
+
+    min-height: 0;
+
+    max-height: none;
+
+    overflow-y: auto;
+
+    overflow-x: hidden;
+
+    overscroll-behavior: contain;
+
+    -webkit-overflow-scrolling: touch;
   }
 
 
   .hero-content {
+
+    min-height: 100%;
+
     height: auto;
 
     padding: 20px 18px 75px;
@@ -1171,6 +1199,7 @@ body {
 
 
   .hero-features {
+
     grid-template-columns: repeat(2, 1fr);
 
     gap: 6px 12px;
@@ -1195,30 +1224,58 @@ body {
 
 
   .hero-bottom {
+
+    position: sticky;
+
+    bottom: 0;
+
     padding: 13px 5px;
 
     font-size: 8px;
   }
 
 
-
   /* =================================================
-     COURSE
+     COURSE = SECOND INDEPENDENT SCROLL AREA
   ================================================= */
 
   .course-section {
-    height: auto;
 
-    overflow: visible;
+    flex: 0 0 50vh;
+
+    width: 100%;
+
+    height: 50vh;
+
+    min-height: 0;
+
+    overflow: hidden;
+
+    background: white;
   }
 
 
+  /*
+     The course section itself stays fixed at 50vh.
+     The content inside it becomes the independent
+     scroll area.
+  */
+
   .course-scroll {
-    height: auto;
 
-    overflow: visible;
+    width: 100%;
 
-    padding: 18px 14px 30px;
+    height: 100%;
+
+    overflow-y: auto;
+
+    overflow-x: hidden;
+
+    overscroll-behavior: contain;
+
+    -webkit-overflow-scrolling: touch;
+
+    padding: 18px 14px 85px;
   }
 
 
@@ -1244,12 +1301,12 @@ body {
   }
 
 
-
   /* =================================================
      MOBILE QUICK CLASS SELECTOR
   ================================================= */
 
   .quick-class-selector {
+
     position: sticky;
 
     top: 0;
@@ -1276,6 +1333,7 @@ body {
 
 
   .quick-class-title {
+
     margin-bottom: 9px;
 
     gap: 5px;
@@ -1293,6 +1351,7 @@ body {
 
 
   .class-grid {
+
     grid-template-columns: repeat(5, 1fr);
 
     gap: 5px;
@@ -1300,6 +1359,7 @@ body {
 
 
   .class-button {
+
     min-height: 48px;
 
     border-radius: 8px;
@@ -1313,6 +1373,7 @@ body {
 
 
   .selected-class {
+
     margin-top: 6px;
 
     padding: 5px;
@@ -1321,12 +1382,12 @@ body {
   }
 
 
-
   /* =================================================
      TIMER
   ================================================= */
 
   .timer {
+
     width: 100%;
 
     margin-top: 10px;
@@ -1338,6 +1399,7 @@ body {
 
 
   .timer-item {
+
     flex: 1;
 
     min-width: 0;
@@ -1354,7 +1416,6 @@ body {
   .timer-colon {
     font-size: 18px;
   }
-
 
 
   /* =================================================
@@ -1381,17 +1442,16 @@ body {
   }
 
 
-
   /* =================================================
      LEARNING
   ================================================= */
 
   .learning-steps {
+
     grid-template-columns: repeat(2, 1fr);
 
     gap: 15px;
   }
-
 
 
   /* =================================================
@@ -1399,6 +1459,7 @@ body {
   ================================================= */
 
   .learning-image-section {
+
     margin-top: 20px;
 
     margin-bottom: 25px;
@@ -1406,6 +1467,7 @@ body {
 
 
   .learning-image-label {
+
     font-size: 8px;
 
     margin-bottom: 8px;
@@ -1413,15 +1475,15 @@ body {
 
 
   .learning-image {
+
     width: 100%;
 
     border-radius: 12px;
   }
 
 
-
   /* =================================================
-     DESKTOP CHECKOUT
+     DESKTOP CHECKOUT HIDDEN
   ================================================= */
 
   .desktop-checkout {
@@ -1429,18 +1491,19 @@ body {
   }
 
 
-
   /* =================================================
      MOBILE CHECKOUT
   ================================================= */
 
   .mobile-checkout {
+
     position: fixed;
 
-    z-index: 1000;
+    z-index: 2000;
 
     left: 0;
     right: 0;
+
     bottom: 0;
 
     display: flex;
@@ -1461,6 +1524,7 @@ body {
 
 
   .mobile-checkout .enroll-button {
+
     flex: 1;
 
     min-height: 51px;
@@ -1478,7 +1542,6 @@ body {
 }
 
 
-
 /* =====================================================
    VERY SMALL MOBILE
 ===================================================== */
@@ -1486,6 +1549,7 @@ body {
 @media (max-width: 380px) {
 
   .class-button {
+
     font-size: 10px;
 
     min-height: 44px;

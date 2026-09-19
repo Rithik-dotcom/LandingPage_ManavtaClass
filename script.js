@@ -4,7 +4,6 @@
 ===================================================== */
 
 
-
 /* =====================================================
    1. CLASS-SPECIFIC PAYMENT LINKS
 
@@ -32,7 +31,6 @@ const paymentLinks = {
 };
 
 
-
 /* =====================================================
    2. VARIABLES
 ===================================================== */
@@ -40,21 +38,16 @@ const paymentLinks = {
 const classButtons =
   document.querySelectorAll(".class-button");
 
-
 const selectedClassText =
   document.getElementById("selectedClass");
-
 
 const desktopEnroll =
   document.getElementById("desktopEnroll");
 
-
 const mobileEnroll =
   document.getElementById("mobileEnroll");
 
-
 let selectedClass = null;
-
 
 
 /* =====================================================
@@ -65,7 +58,6 @@ classButtons.forEach(button => {
 
   button.addEventListener("click", function () {
 
-
     /* Remove previous selection */
 
     classButtons.forEach(btn => {
@@ -75,18 +67,15 @@ classButtons.forEach(button => {
     });
 
 
-
     /* Activate selected class */
 
     this.classList.add("active");
-
 
 
     /* Get selected class */
 
     selectedClass =
       this.dataset.class;
-
 
 
     /* Update selected message */
@@ -97,7 +86,6 @@ classButtons.forEach(button => {
       " selected ✓";
 
 
-
     /* Enable enrollment buttons */
 
     desktopEnroll.disabled = false;
@@ -105,12 +93,10 @@ classButtons.forEach(button => {
     mobileEnroll.disabled = false;
 
 
-
     /* Change button text */
 
     desktopEnroll.innerText =
       "ENROLL FOR ₹29";
-
 
     mobileEnroll.innerText =
       "ENROLL FOR ₹29";
@@ -120,13 +106,11 @@ classButtons.forEach(button => {
 });
 
 
-
 /* =====================================================
    4. ENROLL FUNCTION
 ===================================================== */
 
 function enrollNow() {
-
 
   /* Safety check */
 
@@ -141,12 +125,10 @@ function enrollNow() {
   }
 
 
-
   /* Get payment URL */
 
   const paymentURL =
     paymentLinks[selectedClass];
-
 
 
   /* Check payment URL */
@@ -167,14 +149,12 @@ function enrollNow() {
   }
 
 
-
   /* Redirect to payment */
 
   window.location.href =
     paymentURL;
 
 }
-
 
 
 /* =====================================================
@@ -187,7 +167,6 @@ desktopEnroll.addEventListener(
 );
 
 
-
 /* =====================================================
    6. MOBILE ENROLL BUTTON
 ===================================================== */
@@ -198,13 +177,13 @@ mobileEnroll.addEventListener(
 );
 
 
-
 /* =====================================================
    7. COUNTDOWN TIMER
 
    Starts at 2 minutes.
 
    Display:
+
    MM : SS : MS
 
    MS = hundredths of a second
@@ -218,18 +197,14 @@ let timeLeft =
 const minutesElement =
   document.getElementById("minutes");
 
-
 const secondsElement =
   document.getElementById("seconds");
-
 
 const millisecondsElement =
   document.getElementById("milliseconds");
 
 
-
 function updateCountdown() {
-
 
   const minutes =
     Math.floor(
@@ -249,7 +224,6 @@ function updateCountdown() {
     );
 
 
-
   minutesElement.innerText =
     String(minutes).padStart(2, "0");
 
@@ -262,26 +236,20 @@ function updateCountdown() {
     String(milliseconds).padStart(2, "0");
 
 
-
   if (timeLeft <= 0) {
 
     clearInterval(countdownTimer);
 
-
     minutesElement.innerText =
       "00";
-
 
     secondsElement.innerText =
       "00";
 
-
     millisecondsElement.innerText =
       "00";
 
-
     return;
-
   }
 
 
@@ -290,14 +258,12 @@ function updateCountdown() {
 }
 
 
-
-/* Start timer immediately */
+/* =====================================================
+   8. START TIMER
+===================================================== */
 
 updateCountdown();
 
-
-
-/* Update every 10 milliseconds */
 
 const countdownTimer =
   setInterval(
@@ -306,9 +272,8 @@ const countdownTimer =
   );
 
 
-
 /* =====================================================
-   8. TOAST
+   9. TOAST
 ===================================================== */
 
 let toastTimer;

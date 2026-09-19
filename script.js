@@ -8,24 +8,128 @@
    1. CLASS-SPECIFIC PAYMENT LINKS
 ===================================================== */
 
-const paymentLinks = {
+// async function enrollNow() {
+//   if (!selectedClass) {
+//     showToast("Please select your class first.");
+//     return;
+//   }
 
-  "6":
-    "https://rzp.io/rzp/xLtD0t0p",
+//   try {
+//     const response = await fetch("/api/create-order", {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json"
+//       },
+//       body: JSON.stringify({
+//         className: selectedClass
+//       })
+//     });
 
-  "7":
-    "YOUR_CLASS_7_PAYMENT_URL",
+//     const data = await response.json();
 
-  "8":
-    "YOUR_CLASS_8_PAYMENT_URL",
+//     if (!response.ok) {
+//       throw new Error(data.error || "Payment failed");
+//     }
 
-  "9":
-    "YOUR_CLASS_9_PAYMENT_URL",
+//     const options = {
+//       key: data.keyId,
+//       amount: data.amount,
+//       currency: "INR",
+//       name: "ManavtaClass",
+//       description: `Class ${selectedClass} - 2026-27`,
+//       order_id: data.orderId,
 
-  "10":
-    "YOUR_CLASS_10_PAYMENT_URL"
+//       prefill: {
+//         name: "",
+//         contact: ""
+//       },
 
-};
+//       hidden: {
+//         email: true
+//       },
+
+//       notes: {
+//         class: `Class ${selectedClass}`
+//       },
+
+//       // handler: function (response) {
+//       //   showToast("Payment successful! ✓");
+//       //   console.log("Payment ID:", response.razorpay_payment_id);
+//       // },
+//       handler: async function (response) {
+
+//         try {
+
+//           const verifyResponse = await fetch(
+//             "/api/verify-payment",
+//             {
+//               method: "POST",
+//               headers: {
+//                 "Content-Type": "application/json"
+//               },
+
+//               body: JSON.stringify({
+//                 razorpay_order_id:
+//                   response.razorpay_order_id,
+
+//                 razorpay_payment_id:
+//                   response.razorpay_payment_id,
+
+//                 razorpay_signature:
+//                   response.razorpay_signature
+//               })
+//             }
+//           );
+
+//           const result = await verifyResponse.json();
+
+//           if (result.success) {
+
+//             showToast(
+//               "Payment successful! ✓"
+//             );
+
+//             console.log(
+//               "Payment ID:",
+//               response.razorpay_payment_id
+//             );
+
+//             console.log(
+//               "Class:",
+//               selectedClass
+//             );
+
+//           } else {
+
+//             showToast(
+//               "Payment verification failed."
+//             );
+
+//           }
+
+//         } catch (error) {
+
+//           console.error(error);
+
+//           showToast(
+//             "Could not verify payment."
+//           );
+//         }
+//       },
+
+//       theme: {
+//         color: "#2563eb"
+//       }
+//     };
+
+//     const rzp = new Razorpay(options);
+//     rzp.open();
+
+//   } catch (error) {
+//     console.error(error);
+//     showToast("Unable to start payment. Please try again.");
+//   }
+// }
 
 
 /* =====================================================
@@ -111,51 +215,140 @@ classButtons.forEach(button => {
    4. ENROLL FUNCTION
 ===================================================== */
 
-function enrollNow() {
+// function enrollNow() {
 
-  /* Safety check */
+//   /* Safety check */
 
+//   if (!selectedClass) {
+
+//     showToast(
+//       "Please select your class first."
+//     );
+
+//     return;
+//   }
+
+
+//   /* Get payment URL */
+
+//   const paymentURL =
+//     paymentLinks[selectedClass];
+
+
+//   /* Check payment URL */
+
+//   if (
+//     !paymentURL ||
+//     paymentURL.includes("YOUR_CLASS")
+//   ) {
+
+//     showToast(
+//       "Payment link for Class " +
+//       selectedClass +
+//       " is not configured yet."
+//     );
+
+//     return;
+//   }
+
+
+//   /* Redirect to payment */
+
+//   window.location.href =
+//     paymentURL;
+
+// }
+
+async function enrollNow() {
   if (!selectedClass) {
-
-    showToast(
-      "Please select your class first."
-    );
-
+    showToast("Please select your class first.");
     return;
   }
 
+  try {
+    const response = await fetch("/api/create-order", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        className: selectedClass
+      })
+    });
 
-  /* Get payment URL */
+    const data = await response.json();
 
-  const paymentURL =
-    paymentLinks[selectedClass];
+    if (!response.ok) {
+      throw new Error(data.error || "Payment failed");
+    }
 
+    const options = {
+      key: data.keyId,
+      amount: data.amount,
+      currency: "INR",
+      name: "ManavtaClass",
+      description: `Class ${selectedClass} - 2026-27`,
+      order_id: data.orderId,
 
-  /* Check payment URL */
+      prefill: {
+        name: "",
+        contact: ""
+      },
 
-  if (
-    !paymentURL ||
-    paymentURL.includes("YOUR_CLASS")
-  ) {
+      hidden: {
+        email: true
+      },
 
-    showToast(
-      "Payment link for Class " +
-      selectedClass +
-      " is not configured yet."
-    );
+      notes: {
+        class: `Class ${selectedClass}`
+      },
 
-    return;
+      handler: async function (response) {
+        try {
+          const verifyResponse = await fetch(
+            "/api/verify-payment",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json"
+              },
+              body: JSON.stringify({
+                razorpay_order_id: response.razorpay_order_id,
+                razorpay_payment_id: response.razorpay_payment_id,
+                razorpay_signature: response.razorpay_signature
+              })
+            }
+          );
+
+          const result = await verifyResponse.json();
+
+          if (result.success) {
+            showToast("Payment successful! ✓");
+            console.log("Payment ID:", response.razorpay_payment_id);
+            console.log("Class:", selectedClass);
+          } else {
+            showToast("Payment verification failed.");
+          }
+
+        } catch (error) {
+          console.error(error);
+          showToast("Could not verify payment.");
+        }
+      },
+
+      theme: {
+        color: "#2563eb"
+      }
+    };
+
+    const rzp = new Razorpay(options);
+    rzp.open();
+
+  } catch (error) {
+    console.error(error);
+    showToast("Unable to start payment. Please try again.");
   }
-
-
-  /* Redirect to payment */
-
-  window.location.href =
-    paymentURL;
-
 }
-
-
 /* =====================================================
    5. DESKTOP ENROLL BUTTON
 ===================================================== */

@@ -158,7 +158,62 @@ let selectedClass = null;
 /* =====================================================
    3. CLASS SELECTION
 ===================================================== */
+function getCookie(name) {
 
+  const match =
+    document.cookie.match(
+      new RegExp(
+        "(^|;\\s*)" +
+        name.replace(
+          /[-[\]{}()*+?.,\\^$|#\s]/g,
+          "\\$&"
+        ) +
+        "=([^;]*)"
+      )
+    );
+
+  return match
+    ? decodeURIComponent(match[2])
+    : "";
+}
+
+
+function getFbc() {
+
+  /*
+   * Use Meta's existing _fbc cookie
+   */
+
+  const existingFbc =
+    getCookie("_fbc");
+
+  if (existingFbc) {
+    return existingFbc;
+  }
+
+  /*
+   * If _fbc doesn't exist,
+   * check for fbclid in URL.
+   */
+
+  const params =
+    new URLSearchParams(
+      window.location.search
+    );
+
+  const fbclid =
+    params.get("fbclid");
+
+  if (!fbclid) {
+    return "";
+  }
+
+  /*
+   * Construct fbc value
+   */
+
+  return `fb.1.${Date.now()}.${fbclid}`;
+}
 classButtons.forEach(button => {
 
   button.addEventListener("click", function () {
@@ -260,6 +315,27 @@ classButtons.forEach(button => {
 // }
 
 async function enrollNow() {
+  // const response = await fetch(
+  //   "/api/create-order",
+  //   {
+  //     method: "POST",
+
+  //     headers: {
+  //       "Content-Type": "application/json"
+  //     },
+
+  //     body: JSON.stringify({
+
+  //       className: selectedClass,
+
+  //       fbp: getCookie("_fbp"),
+
+  //       fbc: getFbc()
+
+  //     })
+  //   }
+  // );
+
   if (!selectedClass) {
     showToast("Please select your class first.");
     return;
@@ -272,7 +348,9 @@ async function enrollNow() {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        className: selectedClass
+        className: selectedClass,
+        fbp: getCookie("_fbp"),
+        fbc: getFbc()
       })
     });
 

@@ -11,7 +11,7 @@
 const paymentLinks = {
 
   "6":
-    "YOUR_CLASS_6_PAYMENT_URL",
+    "https://rzp.io/rzp/xLtD0t0p",
 
   "7":
     "YOUR_CLASS_7_PAYMENT_URL",

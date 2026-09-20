@@ -1010,7 +1010,7 @@ body {
 @media (max-width: 950px) {
 
   .page {
-    grid-template-columns: 35% 60%;
+    grid-template-columns: 50% 50%;
   }
 
 
@@ -1070,7 +1070,7 @@ body {
 
     grid-template-columns: 1fr;
 
-    grid-template-rows: 35vh 60vh;
+    grid-template-rows: 50vh 50vh;
 
     width: 100%;
 
@@ -1484,7 +1484,7 @@ body {
 @media (max-width: 380px) {
 
   .page {
-    grid-template-rows: 35vh 60vh;
+    grid-template-rows: 50vh 50vh;
   }
 
 

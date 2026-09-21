@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Payment successful - ManavtaClass">
+
+  <meta name="robots" content="noindex, nofollow">
+
+  <title>Payment Successful | ManavtaClass</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      min-height: 100%;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background:
+        linear-gradient(135deg,
+          #eff6ff 0%,
+          #ffffff 50%,
+          #f0f9ff 100%);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 24px;
+
+      color: #172033;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 620px;
+    }
+
+    .card {
+      background: #ffffff;
+
+      border: 1px solid #e5e7eb;
+
+      border-radius: 24px;
+
+      padding: 48px 42px;
+
+      text-align: center;
+
+      box-shadow:
+        0 20px 60px rgba(15, 23, 42, 0.10);
+    }
+
+    /* LOGO */
+
+    .brand {
+      margin-bottom: 32px;
+    }
+
+    .brand-name {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      color: #2563eb;
+    }
+
+    .brand-tagline {
+      margin-top: 5px;
+      font-size: 12px;
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    /* SUCCESS ICON */
+
+    .success-icon {
+      width: 86px;
+      height: 86px;
+
+      margin: 0 auto 24px;
+
+      border-radius: 50%;
+
+      background: #dcfce7;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: #16a34a;
+
+      font-size: 46px;
+      font-weight: 700;
+
+      border: 7px solid #f0fdf4;
+    }
+
+    /* CONTENT */
+
+    h1 {
+      font-size: 34px;
+      line-height: 1.2;
+
+      color: #111827;
+
+      margin-bottom: 12px;
+
+      font-weight: 800;
+    }
+
+    .welcome {
+      font-size: 18px;
+      color: #2563eb;
+
+      font-weight: 700;
+
+      margin-bottom: 14px;
+    }
+
+    .message {
+      max-width: 470px;
+
+      margin: 0 auto;
+
+      font-size: 16px;
+
+      line-height: 1.7;
+
+      color: #64748b;
+    }
+
+    /* CLASS BOX */
+
+    .class-box {
+      margin: 28px 0;
+
+      padding: 18px 20px;
+
+      border-radius: 14px;
+
+      background: #eff6ff;
+
+      border: 1px solid #dbeafe;
+    }
+
+    .class-label {
+      font-size: 12px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.8px;
+
+      color: #64748b;
+
+      font-weight: 700;
+
+      margin-bottom: 5px;
+    }
+
+    .class-value {
+      font-size: 21px;
+
+      color: #1d4ed8;
+
+      font-weight: 800;
+    }
+
+    /* BUTTONS */
+
+    .actions {
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 12px;
+
+      margin-top: 26px;
+    }
+
+    .btn {
+      width: 100%;
+
+      min-height: 52px;
+
+      border-radius: 12px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      text-decoration: none;
+
+      font-size: 15px;
+
+      font-weight: 700;
+
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+    }
+
+    .btn-primary {
+      background: #2563eb;
+
+      color: #ffffff;
+
+      box-shadow:
+        0 8px 20px rgba(37, 99, 235, 0.22);
+    }
+
+    .btn-primary:hover {
+      background: #1d4ed8;
+
+      transform: translateY(-1px);
+
+      box-shadow:
+        0 12px 25px rgba(37, 99, 235, 0.28);
+    }
+
+    .btn-secondary {
+      background: #ffffff;
+
+      color: #2563eb;
+
+      border: 1px solid #bfdbfe;
+    }
+
+    .btn-secondary:hover {
+      background: #eff6ff;
+
+      transform: translateY(-1px);
+    }
+
+    /* SUPPORT */
+
+    .support {
+      margin-top: 30px;
+
+      padding-top: 24px;
+
+      border-top: 1px solid #e5e7eb;
+
+      font-size: 13px;
+
+      line-height: 1.7;
+
+      color: #64748b;
+    }
+
+    .support a {
+      color: #2563eb;
+
+      font-weight: 600;
+
+      text-decoration: none;
+    }
+
+    .support a:hover {
+      text-decoration: underline;
+    }
+
+    .note {
+      margin-top: 8px;
+
+      font-size: 12px;
+
+      color: #94a3b8;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 600px) {
+
+      body {
+        padding: 14px;
+      }
+
+      .card {
+        padding: 36px 22px;
+
+        border-radius: 20px;
+      }
+
+      .brand {
+        margin-bottom: 26px;
+      }
+
+      .brand-name {
+        font-size: 20px;
+      }
+
+      .success-icon {
+        width: 76px;
+        height: 76px;
+
+        font-size: 40px;
+
+        margin-bottom: 20px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .welcome {
+        font-size: 17px;
+      }
+
+      .message {
+        font-size: 15px;
+      }
+
+      .class-box {
+        margin: 24px 0;
+      }
+
+      .btn {
+        min-height: 50px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="page">
+
+    <section class="card">
+
+      <!-- BRAND -->
+
+      <div class="brand">
+        <a href="./index.html" class="logo" aria-label="ManavtaClass Home">
+          <img src="./assets/logo.png" alt="ManavtaClass Logo" width="120" height="auto">
+        </a>
+        <div class="brand-name">
+          MANAVTA CLASS
+
+        </div>
+
+        <div class="brand-tagline">
+          Learn Better. Perform Better.
+        </div>
+      </div>
+
+
+      <!-- SUCCESS -->
+
+      <div class="success-icon">
+        ✓
+      </div>
+
+
+      <!-- MESSAGE -->
+
+      <h1>
+        Payment Successful!
+      </h1>
+
+      <div class="welcome">
+        Welcome to ManavtaClass
+      </div>
+
+      <p class="message">
+        Your enrollment has been successfully verified.
+        You are now ready to begin your learning journey
+        with ManavtaClass for the Academic Session 2026–27.
+      </p>
+
+
+      <!-- CLASS -->
+
+      <div class="class-box">
+
+        <div class="class-label">
+          Enrolled Class
+        </div>
+
+        <div class="class-value" id="classValue">
+          Class
+        </div>
+
+      </div>
+
+
+      <!-- ACTIONS -->
+
+      <div class="actions">
+
+        <a href="https://manavtaclass.educrypt.ai/" class="btn btn-primary">
+          Go to Student Dashboard
+        </a>
+
+        <a href="https://play.google.com/store/apps/details?id=com.manavtaclass.myapp" class="btn btn-secondary"
+          target="_blank" rel="noopener">
+          Download ManavtaClass App
+        </a>
+
+      </div>
+
+
+      <!-- SUPPORT -->
+
+      <div class="support">
+
+        Need help with your enrollment?
+
+        <br>
+
+        Contact us at
+        <a href="mailto:support@manavtaclass.com">
+          support@manavtaclass.com
+        </a>
+
+        <div class="note">
+          Please keep this page for your records.
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <script>
+
+    // Get class from the URL
+    const params = new URLSearchParams(
+      window.location.search
+    );
+
+    const selectedClass = params.get("class");
+
+    const classValue =
+      document.getElementById("classValue");
+
+    if (selectedClass) {
+
+      classValue.textContent =
+        "Class " + selectedClass;
+
+    } else {
+
+      classValue.textContent =
+        "Enrollment Confirmed";
+
+    }
+
+  </script>
+
+</body>
+
+</html>

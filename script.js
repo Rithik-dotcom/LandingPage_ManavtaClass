@@ -380,11 +380,13 @@ async function enrollNow() {
           );
 
           const result = await verifyResponse.json();
-
+          // rithik changed payment succes for redirection  
           if (result.success) {
-            showToast("Payment successful! ✓");
-            console.log("Payment ID:", response.razorpay_payment_id);
-            console.log("Class:", selectedClass);
+            window.location.href =
+              "/payment-success.html?payment_id=" +
+              encodeURIComponent(response.razorpay_payment_id) +
+              "&class=" +
+              encodeURIComponent(selectedClass);
           } else {
             showToast("Payment verification failed.");
           }

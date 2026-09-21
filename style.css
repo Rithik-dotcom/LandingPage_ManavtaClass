@@ -131,7 +131,7 @@ body {
 
   z-index: 2;
 
-  padding: clamp(35px, 4vw, 65px);
+  /* padding: clamp(35px, 4vw, 65px); */
 }
 
 
@@ -1010,7 +1010,7 @@ body {
 @media (max-width: 950px) {
 
   .page {
-    grid-template-columns: 35% 60%;
+    grid-template-columns: 50% 50%;
   }
 
 
@@ -1070,7 +1070,7 @@ body {
 
     grid-template-columns: 1fr;
 
-    grid-template-rows: 35vh 60vh;
+    grid-template-rows: 50vh 50vh;
 
     width: 100%;
 
@@ -1104,14 +1104,14 @@ body {
 
     overflow-x: hidden;
 
-    padding-bottom: 50px;
+    padding-bottom: 0px;
   }
 
 
   .hero-content {
     height: auto;
 
-    padding: 20px 18px 35px;
+    padding: 0px 0px 0px;
   }
 
 
@@ -1484,7 +1484,7 @@ body {
 @media (max-width: 380px) {
 
   .page {
-    grid-template-rows: 35vh 60vh;
+    grid-template-rows: 50vh 50vh;
   }
 
 
@@ -1512,6 +1512,75 @@ body {
 
   .timer-colon {
     font-size: 16px;
+  }
+
+}
+
+/* =====================================================
+   ADDITIONAL LEARNING CONTENT
+===================================================== */
+/* =====================================================
+   FULL WIDTH LEARNING IMAGES
+===================================================== */
+
+.hero-learning-content {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.hero-learning-content img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  object-fit: contain;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .hero-learning-content {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .hero-learning-content img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    object-fit: contain;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+
+  .hero-learning-content img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
   }
 
 }

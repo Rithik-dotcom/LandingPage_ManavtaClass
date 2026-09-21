@@ -1070,7 +1070,7 @@ body {
 
     grid-template-columns: 1fr;
 
-    grid-template-rows: auto 30vh;
+    grid-template-rows: auto 40vh;
 
     width: 100%;
 
@@ -1484,7 +1484,7 @@ body {
 @media (max-width: 380px) {
 
   .page {
-    grid-template-rows: auto 30vh;
+    grid-template-rows: auto 40vh;
   }
 
 

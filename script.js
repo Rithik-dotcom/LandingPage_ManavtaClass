@@ -214,55 +214,36 @@ function getFbc() {
 
   return `fb.1.${Date.now()}.${fbclid}`;
 }
-classButtons.forEach(button => {
 
+classButtons.forEach(button => {
   button.addEventListener("click", function () {
 
     /* Remove previous selection */
-
     classButtons.forEach(btn => {
-
       btn.classList.remove("active");
-
     });
 
-
     /* Activate selected class */
-
     this.classList.add("active");
 
-
     /* Get selected class */
-
-    selectedClass =
-      this.dataset.class;
-
+    selectedClass = this.dataset.class;
 
     /* Update selected message */
-
     selectedClassText.innerHTML =
-      "Class " +
-      selectedClass +
-      " selected ✓";
-
+      "Class " + selectedClass + " selected ✓";
 
     /* Enable enrollment buttons */
-
     desktopEnroll.disabled = false;
-
     mobileEnroll.disabled = false;
 
-
     /* Change button text */
+    desktopEnroll.innerText = "ENROLL FOR ₹29";
+    mobileEnroll.innerText = "ENROLL FOR ₹29";
 
-    desktopEnroll.innerText =
-      "ENROLL FOR ₹29";
-
-    mobileEnroll.innerText =
-      "ENROLL FOR ₹29";
-
+    /* Open Razorpay immediately */
+    enrollNow();
   });
-
 });
 
 

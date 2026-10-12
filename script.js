@@ -238,8 +238,8 @@ classButtons.forEach(button => {
     mobileEnroll.disabled = false;
 
     /* Change button text */
-    desktopEnroll.innerText = "ENROLL FOR ₹29";
-    mobileEnroll.innerText = "ENROLL FOR ₹29";
+    desktopEnroll.innerText = "ENROLL FOR ₹9";
+    mobileEnroll.innerText = "ENROLL FOR ₹9";
 
     /* Open Razorpay immediately */
     enrollNow();
